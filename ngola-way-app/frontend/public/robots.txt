@@ -1,0 +1,20 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin and private routes
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /profile/
+Disallow: /settings/
+Disallow: /api/
+
+# Allow public routes
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /blog
+Allow: /faq
+
+# Sitemap location
+Sitemap: https://ngolaway.com/sitemap.xml
