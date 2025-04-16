@@ -17,8 +17,10 @@
   "dependencies": {
     "@headlessui/react": "^1.7.19",
     "@heroicons/react": "^2.2.0",
+    "@types/mapbox-gl": "^3.4.1",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
+    "mapbox-gl": "^3.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.30.0",
