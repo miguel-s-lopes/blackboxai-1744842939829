@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Ngola Way</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 28rem;
+            text-align: center;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .icon {
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto 1.5rem;
+            color: #0284c7;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #0284c7;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: #0369a1;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1f2937;
+                color: #f9fafb;
+            }
+
+            .container {
+                background-color: #111827;
+            }
+
+            h1 {
+                color: #f9fafb;
+            }
+
+            p {
+                color: #9ca3af;
+            }
+
+            .button {
+                background-color: #0284c7;
+            }
+
+            .button:hover {
+                background-color: #0369a1;
+            }
+
+            .footer {
+                color: #9ca3af;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
+        </svg>
+        
+        <h1>You're offline</h1>
+        <p>It looks like you've lost your internet connection. Please check your connection and try again.</p>
+        
+        <a href="/" class="button" id="retry-button">Try Again</a>
+        
+        <div class="footer">
+            <p>Some features may be limited while you're offline</p>
+        </div>
+    </div>
+
+    <script>
+        // Check if we're back online
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+
+        // Retry button handler
+        document.getElementById('retry-button').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.reload();
+        });
+
+        // Check connection status periodically
+        setInterval(() => {
+            if (navigator.onLine) {
+                window.location.reload();
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
