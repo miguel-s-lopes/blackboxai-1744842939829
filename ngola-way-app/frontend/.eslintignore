@@ -1,0 +1,61 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+__tests__
+__mocks__
+
+# Production
+build
+dist
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.idea
+.vscode
+
+# TypeScript
+*.tsbuildinfo
+
+# Cache
+.eslintcache
+.cache
+
+# Public
+public/*
+
+# Package files
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Config files
+*.config.js
+*.config.ts
+vite.config.ts
+postcss.config.js
+tailwind.config.js
+
+# Generated files
+*.generated.*
+*.d.ts
+
+# Service worker
+serviceWorker.js
+serviceWorkerRegistration.js
+serviceWorkerRegistration.ts
