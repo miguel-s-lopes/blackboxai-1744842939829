@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useAuth } from ''hooks/useAuth''; 
-import { Loading } from ''components/common/Loading'';
+import { useAuth } from 'hooks/useAuth'; 
+import { Loading } from 'components/common/Loading';
 
 interface ProtectedRouteProps {
   children: ReactElement;
