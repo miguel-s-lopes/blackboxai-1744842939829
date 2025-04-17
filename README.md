@@ -1,2 +1,3 @@
-# blackboxai-1744842939829
-Built by https://www.blackbox.ai
+#NGOLA APP 
+
+A new way to live.
